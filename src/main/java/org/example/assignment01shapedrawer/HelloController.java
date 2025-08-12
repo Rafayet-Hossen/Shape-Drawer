@@ -10,12 +10,6 @@ import javafx.scene.shape.Rectangle;
 
 public class HelloController {
     @FXML
-    private Button addCircleBtn;
-    @FXML
-    private Button addRectangleBtn;
-    @FXML
-    private Button clearShapeBtn;
-    @FXML
     private Pane myDrawingPane;
     @FXML
     private ColorPicker myColorPicker;
