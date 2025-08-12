@@ -24,25 +24,22 @@ public class HelloController {
 
     public void addCircle(ActionEvent e) {
         Circle myCircle = new Circle(50);
-        myCircle.setFill(myColorPicker.getValue());
-        double maxWidth = myDrawingPane.getWidth()-myCircle.getRadius();
-        double maxHeight = myDrawingPane.getHeight()-myCircle.getRadius();
-        double xAxis = myCircle.getRadius() + Math.random() * maxWidth;
-        double yAxis = myCircle.getRadius() + Math.random() * maxHeight;
+        double maxX = myDrawingPane.getWidth()-myCircle.getRadius();
+        double minX = myCircle.getRadius();
+        double maxY = myDrawingPane.getHeight()-myCircle.getRadius();
+        double minY = myCircle.getRadius();
+        double xAxis = minX + Math.random() * (maxX - minX);
+        double yAxis = minY + Math.random() * (maxY - minY);
         myCircle.setCenterX(xAxis);
         myCircle.setCenterY(yAxis);
         myDrawingPane.getChildren().add(myCircle);
     }
     public void addRectangle(ActionEvent e) {
-        Rectangle rectangle  = new Rectangle(150,100);
-        double maxWidth = myDrawingPane.getWidth()-rectangle.getWidth();
-        double maxHeight = myDrawingPane.getHeight()-rectangle.getHeight();
-        double xAxis = rectangle.getWidth() + Math.random() * maxWidth;
-        double yAxis = rectangle.getHeight() + Math.random() * maxHeight;
-        rectangle.setX(xAxis);
-        rectangle.setY(yAxis);
-        rectangle.setFill(myColorPicker.getValue());
-        myDrawingPane.getChildren().add(rectangle);
+        Rectangle myRectangle  = new Rectangle(150,100);
+        myRectangle.setX((myDrawingPane.getWidth()-myRectangle.getWidth())*Math.random());
+        myRectangle.setY((myDrawingPane.getHeight()-myRectangle.getHeight())*Math.random());
+        myRectangle.setFill(myColorPicker.getValue());
+        myDrawingPane.getChildren().add(myRectangle);
     }
     public void clearShape(ActionEvent e) {
         myDrawingPane.getChildren().clear();

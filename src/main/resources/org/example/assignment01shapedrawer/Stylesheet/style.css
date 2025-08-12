@@ -1,0 +1,13 @@
+.button {
+    -fx-background-color: #ED9526;
+    -fx-text-fill: #FFF4E3;
+    -fx-border-radius: 10;
+    -fx-border-width: 2px;
+    -fx-border-color: #302F2F;
+}
+#myDrawingPane {
+    -fx-background-color: #E8E8E8;
+    -fx-border-radius: 10;
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+}
