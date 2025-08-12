@@ -4,9 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
-import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 
@@ -32,6 +30,7 @@ public class HelloController {
         double yAxis = minY + Math.random() * (maxY - minY);
         myCircle.setCenterX(xAxis);
         myCircle.setCenterY(yAxis);
+        myCircle.setFill(myColorPicker.getValue());
         myDrawingPane.getChildren().add(myCircle);
     }
     public void addRectangle(ActionEvent e) {

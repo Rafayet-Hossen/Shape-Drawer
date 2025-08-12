@@ -1,12 +1,29 @@
 .button {
     -fx-background-color: #ED9526;
     -fx-text-fill: #FFF4E3;
-    -fx-border-radius: 10;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-border-width: 2px;
+    -fx-border-color: #302F2F;
+}
+.button:hover {
+    -fx-background-color: #FFB403;
+    -fx-text-fill: #050300;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+#myColorPicker {
+    -fx-background-color: #ED9526;
+    -fx-text-fill: #FFF4E3;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
     -fx-border-width: 2px;
     -fx-border-color: #302F2F;
 }
 #myDrawingPane {
-    -fx-background-color: #E8E8E8;
     -fx-border-radius: 10;
     -fx-border-width: 2px;
     -fx-border-color: black;
